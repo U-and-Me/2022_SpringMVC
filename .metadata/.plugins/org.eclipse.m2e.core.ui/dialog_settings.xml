@@ -2,6 +2,9 @@
 <section name="Workbench">
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="C:\_SpringMVC\GetParameterObject\src\main\webapp\WEB-INF\views"/>
+			<item value="C:\_SpringMVC\GetParameter"/>
+			<item value="C:\_SpringMVC\RequestMapping\src\main\webapp\WEB-INF\views"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
@@ -43,12 +46,10 @@
 	</section>
 	<section name="MavenProjectWizardArtifactPage">
 		<list key="groupId">
-			<item value="kr.hs.study"/>
 		</list>
 		<list key="name">
 		</list>
 		<list key="artifactId">
-			<item value="FirstMVC"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>

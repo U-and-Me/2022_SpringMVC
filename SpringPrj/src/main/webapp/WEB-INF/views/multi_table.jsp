@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<a href="sum">1부터 10까지의 합</a>
-	<a href="multi_table/6">구구단</a>
+	<h2>구구단</h2>
+	<h4>${requestScope.result }</h4>
 </body>
 </html>

@@ -7,7 +7,10 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<a href="sum">1부터 10까지의 합</a>
-	<a href="multi_table/6">구구단</a>
+	<form method="post" action="test1">
+		data1 : <input type="text" name="data1" /> <br>
+		data2 : <input type="text" name="data2" /> <br>
+		<button type="submit">입력완료</button>
+	</form>
 </body>
 </html>

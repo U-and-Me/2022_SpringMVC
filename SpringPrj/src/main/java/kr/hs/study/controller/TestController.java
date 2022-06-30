@@ -4,7 +4,10 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
+
+import kr.hs.study.dto.ScoreBean;
 
 
 @Controller
@@ -37,5 +40,20 @@ public class TestController {
 		model.addAttribute("result", multi_table);
 		
 		return "multi_table";
+	}
+	
+	@GetMapping(value="/score")
+	public String score() {
+		return "score";
+	}
+	
+	// ¼ºÀû
+	@PostMapping(value="/score")
+	public String score(ScoreBean bean, Model model){
+		
+		model.addAttribute("dto", bean);
+		
+		
+		return "re_score";
 	}
 }

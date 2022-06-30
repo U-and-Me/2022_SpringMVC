@@ -7,8 +7,11 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<a href="sum">1부터 10까지의 합</a>
-	<a href="multi_table/6">구구단</a>
-	<a href="score">성적</a>
+	<h2>성적</h2>
+	<h4>이름 : ${dto.name }</h4>
+	<h4>국어 : ${dto.kor }</h4>
+	<h4>영어 : ${dto.eng }</h4>
+	<h4>수학 : ${dto.mat }</h4>
+	<h4>총점 : ${dto.total }</h4>
 </body>
 </html>

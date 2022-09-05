@@ -4,9 +4,9 @@
 <html>
 <head>
 <meta charset="EUC-KR">
-<title>Insert title here</title>
+<title>회원가입/로그인</title>
 </head>
 <body>
-	<%@ include file = "include/menu.jsp" %>
+<h1>Result!!!!</h1>
 </body>
 </html>

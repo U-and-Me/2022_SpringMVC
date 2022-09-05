@@ -7,10 +7,11 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h2>업로드하세요</h2> <br/>
-<form action="re_upload" method="post" enctype="multipart/form-data">
-파일 업로드 : <input type="file" name="file">
-<button type="submit">업로드 완료</button>
-</form>
+
+	<form method="get" action="multi">
+		<input type="text" name="number"/>
+		<input type="submit" value="전송" />
+	</form>
+
 </body>
 </html>

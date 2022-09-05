@@ -13,34 +13,32 @@ import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
-public class uploadController {
+public class UploadController {
 	
 	@Autowired
-	@Qualifier("uploadPath")
-	private String uploadPath;	// 실제 업로드될 폴더
+	@Qualifier("uploadPath") // 실제 업로드될 폴더
+	private String uploadPath;
 	
-    @GetMapping("/upload")
-    public String upload_get(){
-        return"upload/upload_form";
-    }
-
-    // 파일업로드 폼 출력되게 매핑
-    @PostMapping("/re_upload")
-    public ModelAndView re_upload(MultipartFile file, ModelAndView mv) throws IOException {
-    	System.out.println("filename : " + file.getOriginalFilename());
-    	System.out.println("fileSize : " + file.getSize());
-    	System.out.println("filetype : " + file.getContentType());
-    	System.out.println("filename2 : " + file.getName());
-    	
-    	String savedName = file.getOriginalFilename();
-    	File a = new File(uploadPath, savedName);
-    	
-    	// 실제 디렉터리에원래 이름으로 복사 => FileCopyUtil
-    	FileCopyUtils.copy(file.getBytes(), a);
-    	mv.setViewName("upload/uploadResult");
-    	mv.addObject("savedName", savedName);
-    	
-    	return mv;
-    }
-    
+	//파일 업로드 폼 출력되게 매핑
+	@GetMapping("/upload")
+	public String upload_form() {
+		return "upload/upload_form";
+	}
+	
+	@PostMapping("/re_upload")
+	public ModelAndView re_upload(MultipartFile file, ModelAndView mv) throws IOException {
+		System.out.println("filename : " + file.getOriginalFilename());
+		System.out.println("filesize : " + file.getSize());
+		System.out.println("filetype : " + file.getContentType());
+		System.out.println("filename2 : " + file.getName());
+		
+		String savedname = file.getOriginalFilename();
+		File a = new File(uploadPath, savedname);
+		
+		FileCopyUtils.copy(file.getBytes(), a);
+		mv.setViewName("upload/uploadResult");
+		mv.addObject("savedname", savedname);
+		
+		return mv;
+	}
 }

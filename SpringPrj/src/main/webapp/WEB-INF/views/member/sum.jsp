@@ -7,10 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h2>업로드하세요</h2> <br/>
-<form action="re_upload" method="post" enctype="multipart/form-data">
-파일 업로드 : <input type="file" name="file">
-<button type="submit">업로드 완료</button>
-</form>
+<h1> 값 : ${sum}</h1>
 </body>
 </html>

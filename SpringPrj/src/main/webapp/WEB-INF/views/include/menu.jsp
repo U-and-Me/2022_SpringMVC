@@ -5,22 +5,13 @@
 <head>
 <meta charset="EUC-KR">
 <title>Insert title here</title>
-<style>
-        a{
-            text-decoration-line: none;
-        }
-        a:hover{
-            color: red;
-            text-decoration: underline;
-        }
-
-    </style>
-
+<link rel="stylesheet" href="css/underline.css">
 </head>
 <body>
-	<a href="sum">1부터 10까지의 합</a> | 
-	<a href="multi_table/6">구구단</a> | 
-	<a href="score">성적</a> | 
-	<a href="upload">파일 업로드</a>
+<a href="sum">1부터 10까지의 합</a>
+<a href="multi_table">구구단</a>
+<a href="grade">성적 구하기</a> <br/><br/>
+<a href=upload>파일 업로드</a>
+<a href=register>회원가입 로그인</a>
 </body>
 </html>

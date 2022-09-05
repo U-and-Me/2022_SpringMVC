@@ -7,10 +7,9 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h2>업로드하세요</h2> <br/>
-<form action="re_upload" method="post" enctype="multipart/form-data">
-파일 업로드 : <input type="file" name="file">
-<button type="submit">업로드 완료</button>
-</form>
+<h2>id : ${dto.userid}</h2> <br/>
+<h2>pw : ${dto.pw}</h2> <br/>
+<h2>name : ${dto.name}</h2> <br/>
+<h2>email : ${dto.email}</h2> <br/>
 </body>
 </html>

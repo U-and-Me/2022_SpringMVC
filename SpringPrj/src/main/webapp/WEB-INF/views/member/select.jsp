@@ -26,7 +26,7 @@
 		<td>${value.upw}</td>
 		<td>${value.uemail}</td>
 		<td>${value.uregDate}</td>
-		<td><a href="member/update?userid=${value.userid}">수정</a> <a href="/update?idx=${value.userid }">삭제</a> </td>
+		<td><a href="member/update?userid=${value.userid}">수정</a> <a href="member/delete?userid=${value.userid }">삭제</a> </td>
 	</tr>
 	</c:forEach>
 	</tbody>

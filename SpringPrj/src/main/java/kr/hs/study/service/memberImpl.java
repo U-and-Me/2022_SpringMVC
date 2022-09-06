@@ -23,8 +23,9 @@ public class memberImpl implements memberInterface {
 		dao.update(dto);
 	}
 
-	public void delete(memberDTO dto) {
+	public void delete(String userid) {
 		// TODO Auto-generated method stub
+		dao.delete(userid);
 
 	}
 

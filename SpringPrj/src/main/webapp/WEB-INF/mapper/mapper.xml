@@ -13,10 +13,14 @@
  </select>
  
  <update id="update_data" parameterType="kr.hs.study.dto.memberDTO">
- update tbl_member set userid = #{userid} , upw = #{upw}, uname = #{uname}, uemail = #{uemail}
+ update tbl_member set uname = #{uname}, uemail = #{uemail} where userid = #{userid}
  </update>
  <select id="read" resultType="kr.hs.study.dto.memberDTO">
  	select * from tbl_member where userid=#{userid}
  </select>
+ 
+ <delete id="delete_data">
+ 	delete from tbl_member where userid=#{userid}
+ </delete>
  
 </mapper>       

@@ -91,4 +91,11 @@ public class TestController {
 		
 		return "/member/result";
 	}
+	
+	@GetMapping("member/delete")
+	public String delete(@RequestParam String userid) {
+		memberService.delete(userid);
+		
+		return "/member/result";
+	}
 }

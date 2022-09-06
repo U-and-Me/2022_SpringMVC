@@ -23,9 +23,9 @@ public class memberDAOImpl implements memberDAO {
 		sqlSession.update("member.update_data", dto);
 	}
 
-	public void delete(memberDTO dto) {
+	public void delete(String userid) {
 		// TODO Auto-generated method stub
-
+		sqlSession.delete("member.delete_data", userid);
 	}
 
 	public List<memberDTO> select() {

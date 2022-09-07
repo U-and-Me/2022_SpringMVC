@@ -21,6 +21,7 @@ public class TestController {
 	@Autowired
 	private memberInterface memberService;
 	
+	// 1부터 10까지의 합
 	@GetMapping("/sum")
 	public String sum(Model model) {
 		int result = 0;
@@ -31,6 +32,7 @@ public class TestController {
 		return "member/sum";
 	}
 	
+	// 구구단
 	@GetMapping("/multi_table")
 	public String multiTable() {
 		return "member/multi_table";
@@ -44,6 +46,7 @@ public class TestController {
 		return "member/result";
 	}
 	
+	// 성적 구하기
 	@GetMapping("/grade")
 	public String grade() {
 		return "member/grade";
@@ -58,6 +61,7 @@ public class TestController {
 		return "member/report";
 	}
 	
+	// 회원가입 로그인
 	@GetMapping("/register")
 	public String login_form() {
 		return "member/login_form";

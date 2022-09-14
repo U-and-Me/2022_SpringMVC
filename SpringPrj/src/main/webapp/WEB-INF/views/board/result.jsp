@@ -7,8 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h1>Welcome bbs~!</h1>
-	<a href="write_form">Write</a> <br>
-	<a href="show_form">Select</a>
+	Result!!!
 </body>
 </html>

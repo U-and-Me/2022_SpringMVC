@@ -23,17 +23,16 @@ public class boardServiceImpl implements boardService{
 	}
 
 	public void update(boardDTO dto) {
-		
+		dao.update(dto);
 	}
 
 	public boardDTO read(int idx) {
 		// TODO Auto-generated method stub
-		return null;
+		return dao.read(idx);
 	}
 
 	public void delete(int idx) {
-		// TODO Auto-generated method stub
-		
+		dao.delete(idx);		
 	}
 
 

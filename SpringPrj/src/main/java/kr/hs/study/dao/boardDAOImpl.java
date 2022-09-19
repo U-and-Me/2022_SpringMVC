@@ -23,15 +23,15 @@ public class boardDAOImpl implements boardDAO{
 	}
 
 	public void update(boardDTO dto) {
-		
+		sqlsession.update("board_mapper_xml.update_board", dto);
 	}
 
 	public boardDTO read(int idx) {
-		return null;
+		return sqlsession.selectOne("board_mapper_xml.read_board", idx);
 	}
 
 	public void delete(int idx) {
-		
+		sqlsession.delete("board_mapper_xml.delete_board", idx);
 	}
 
 }

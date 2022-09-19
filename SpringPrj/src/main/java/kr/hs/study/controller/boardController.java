@@ -55,8 +55,6 @@ public class boardController {
 	public String update_form(boardDTO dto, @RequestParam int idx) {
 		dto.setIdx(idx);
 		boardservice.update(dto);
-		System.out.println(dto.getIdx());
-		System.out.println(dto.getContent());
 		
 		return "board/result";
 	}
@@ -66,6 +64,19 @@ public class boardController {
 		boardservice.delete(idx);
 		
 		return "board/result";
+	}
+	
+	@GetMapping("board/board_detail")
+	public String board_detail(Model model, @RequestParam int idx) {
+		boardDTO list = boardservice.read(idx);
+		model.addAttribute("list", list);
+		
+		// 조회수 1 증가
+		list.setHit(list.getHit() + 1);
+		boardservice.update(list);
+		System.out.println(list.getHit());
+		
+		return "board/detail_form";
 	}
 	
 }

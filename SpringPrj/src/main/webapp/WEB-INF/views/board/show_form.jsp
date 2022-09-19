@@ -15,7 +15,6 @@
 				<td>idx</td>
 				<td>title</td>
 				<td>writer</td>
-				<td>content</td>
 				<td>email</td>
 				<td>hit</td>
 				<td>regDate</td>
@@ -25,9 +24,8 @@
 			<c:forEach var="value" items="${list}">
 				<tr>
 					<td>${value.idx }</td>
-					<td>${value.title }</td>
+					<td><a href="board/board_detail?idx=${value.idx }">${value.title }</a></td>
 					<td>${value.writer }</td>
-					<td>${value.content }</td>
 					<td>${value.email }</td>
 					<td>${value.hit }</td>
 					<td>${value.regDate }</td>

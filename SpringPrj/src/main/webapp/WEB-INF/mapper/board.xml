@@ -15,7 +15,7 @@
  	select * from tbl_bbs where idx=#{idx}
  	</select>
  	<update id="update_board" parameterType="kr.hs.study.dto.boardDTO">
- 		update tbl_bbs set title = #{title}, password = #{password}, writer = #{writer}, content = #{content}, email = #{email} where idx = #{idx}
+ 		update tbl_bbs set title = #{title}, password = #{password}, writer = #{writer}, content = #{content}, email = #{email}, hit = #{hit} where idx = #{idx}
  	</update>
  	<delete id="delete_board">
  		delete from tbl_bbs where idx = #{idx}

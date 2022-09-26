@@ -13,6 +13,7 @@
 <a href="grade">성적 구하기</a> <br/>
 <a href=upload>파일 업로드</a> <br/>
 <a href=register>회원가입 로그인</a> <br/>
-<a href="bbs">게시판</a>
+<a href="bbs">게시판</a> <br>
+<a href="shop">쇼핑몰</a>
 </body>
 </html>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ 
+ <mapper namespace="product_mapper_xml">
+ 	<insert id="insert_product" parameterType="kr.hs.study.dto.productDTO">
+ 	   insert into product(productId, productName, productPrice, productDesc, productUrl) 
+ 	   values(seq_product.nextval, #{productName}, #{productPrice}, #{productDesc}, #{productUrl})
+ 	</insert>
+ </mapper>      

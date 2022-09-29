@@ -8,4 +8,7 @@
  	   insert into product(productId, productName, productPrice, productDesc, productUrl) 
  	   values(seq_product.nextval, #{productName}, #{productPrice}, #{productDesc}, #{productUrl})
  	</insert>
+ 	<select id="selectall_product" resultType="kr.hs.study.dto.productDTO">
+ 		select * from product order by productId
+ 	</select>
  </mapper>      

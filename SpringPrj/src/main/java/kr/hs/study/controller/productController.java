@@ -1,10 +1,13 @@
 package kr.hs.study.controller;
 
 import java.io.File;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import kr.hs.study.dto.productDTO;
@@ -44,5 +47,19 @@ public class productController {
 		productservice.insert(dto);
 		
 		return "redirect:/";
+	}
+	
+	@GetMapping("/product/list")
+	public String list(Model model) {
+		List<productDTO> list = productservice.selectAll();
+		model.addAttribute("list", list);
+		
+		return "product/product_list";
+	}
+	
+	@GetMapping("/product/detail/{productId}")
+	public String detail(@PathVariable int productId, productDTO dto) {
+		
+		return "product/product_detail";
 	}
 }

@@ -19,7 +19,7 @@ public class productDAOImpl implements productDAO{
 	}
 
 	public List<productDTO> selectAll() {
-		return null;
+		return sqlsession.selectList("product_mapper_xml.selectall_product");
 	}
 
 	public void update(productDTO dto) {

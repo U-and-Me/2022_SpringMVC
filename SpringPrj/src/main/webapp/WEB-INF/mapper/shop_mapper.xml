@@ -11,4 +11,7 @@
  	<select id="selectall_product" resultType="kr.hs.study.dto.productDTO">
  		select * from product order by productId
  	</select>
+ 	<select id="select_product" resultType="kr.hs.study.dto.productDTO">
+ 		select * from product where productId = #{productId}
+ 	</select>
  </mapper>      

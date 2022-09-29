@@ -22,7 +22,7 @@
 			<c:forEach var="value" items="${list}">
 				<tr>
 					<td>${value.productId }</td>
-					<td><a href="product/detail/${value.productId }"><img src="../img/${value.productUrl}"></a></td>
+					<td><a href="detail/${value.productId }"><img src="../img/${value.productUrl}"></a></td>
 					<td>${value.productName }</td>
 					<td>${value.productPrice }</td>
 				</tr>

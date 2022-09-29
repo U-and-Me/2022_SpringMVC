@@ -57,8 +57,10 @@ public class productController {
 		return "product/product_list";
 	}
 	
-	@GetMapping("/product/detail/{productId}")
-	public String detail(@PathVariable int productId, productDTO dto) {
+	@GetMapping("product/detail/{productId}")
+	public String detail(@PathVariable int productId, Model model) {
+		productDTO list = productservice.read(productId);
+		model.addAttribute("list", list);
 		
 		return "product/product_detail";
 	}

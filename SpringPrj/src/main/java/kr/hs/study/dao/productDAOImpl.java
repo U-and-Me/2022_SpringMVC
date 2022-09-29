@@ -27,7 +27,7 @@ public class productDAOImpl implements productDAO{
 	}
 
 	public productDTO read(int id) {
-		return null;
+		return sqlsession.selectOne("product_mapper_xml.select_product", id);
 	}
 
 	public void delete(int id) {

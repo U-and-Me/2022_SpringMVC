@@ -14,4 +14,16 @@
  	<select id="select_product" resultType="kr.hs.study.dto.productDTO">
  		select * from product where productId = #{productId}
  	</select>
+ 	
+ 	<insert id="insert_cart" parameterType="kr.hs.study.dto.cartDTO">
+ 		insert into cart(cart_id, product_id, amount)
+ 		values(seq_cartid.nextval, #{product_id}, #{amount})
+ 	</insert>
+ 	
+ 	<select id="select_cart" resultType="map">
+ 		select p.productName, c.amount, p.productPrice*c.amount as total
+ 		from product p, cart c
+ 		where p.productId = c.product_id
+ 		order by c.cart_id
+ 	</select>
  </mapper>      

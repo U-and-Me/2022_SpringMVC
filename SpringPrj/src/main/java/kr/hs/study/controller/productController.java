@@ -2,6 +2,7 @@ package kr.hs.study.controller;
 
 import java.io.File;
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -10,7 +11,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
+import kr.hs.study.dto.cartDTO;
 import kr.hs.study.dto.productDTO;
+import kr.hs.study.service.cartService;
 import kr.hs.study.service.productService;
 
 @Controller
@@ -18,6 +21,8 @@ public class productController {
 	
 	@Autowired
 	productService productservice;
+	@Autowired
+	cartService cartservice;
 	
 	@GetMapping("/shop")
 	public String shop() {
@@ -64,4 +69,15 @@ public class productController {
 		
 		return "product/product_detail";
 	}
+	
+	@PostMapping("/product/detail/cart_insert")
+	public String cart_insert(cartDTO dto, Model model) {
+		cartservice.insert(dto);
+		
+		List<Map<String, Object>> list = cartservice.selectAll();
+		model.addAttribute("list", list);	
+		
+		return "product/cart_list";
+	}
+	
 }

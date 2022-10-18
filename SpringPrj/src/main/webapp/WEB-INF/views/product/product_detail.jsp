@@ -28,17 +28,17 @@
 				</tr>
 				<tr>
 					<td class="col-sm-2">상품 가격</td>
-					<td><fmt:formatNumber value="${list.productPrice }"
-							pattern="###,###,###" /></td>
+					<td><fmt:formatNumber value="${list.productPrice }"	pattern="###,###,###" /></td>
 					<td>
 						<form name="myForm" method="post" action="cart_insert">
-							<input type="hidden" value="${list.productId}" /> <select
-								name="amount">
+							<input type="hidden" value="${list.productId}" name="product_id"/> 
+							<select	name="amount">
 								<c:forEach begin="1" end="10" var="i">
 									<option value="${i }">${i }</option>
 								</c:forEach>
 							</select>개 <input type="submit">장바구니 담기
-						</form> <a href="list_all">상품목록</a>
+						</form>
+						<a href="list_all">상품목록</a>
 					</td>
 				</tr>
 			</table>
